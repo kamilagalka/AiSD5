@@ -4,8 +4,9 @@ public class Quicksort extends Algorithm {
 
     @Override
     public int[] runAlgorithm(int[] sequence) {
-
-        return quicksort(sequence,0,sequence.length-1);
+        if (sequence != null) {
+            return quicksort(sequence, 0, sequence.length - 1);
+        } else return null;
     }
 
 
@@ -13,15 +14,15 @@ public class Quicksort extends Algorithm {
         if (startIndex < endIndex) {
             int partitionIndex = partition(sequence, startIndex, endIndex);
 
-            quicksort(sequence, startIndex, partitionIndex-1);
-            quicksort(sequence, partitionIndex+1, endIndex);
+            quicksort(sequence, startIndex, partitionIndex - 1);
+            quicksort(sequence, partitionIndex + 1, endIndex);
         }
         return sequence;
     }
 
     private int partition(int sequence[], int startIndex, int endIndex) {
         int pivot = sequence[endIndex];
-        int i = (startIndex-1);
+        int i = (startIndex - 1);
 
         for (int j = startIndex; j < endIndex; j++) {
             if (sequence[j] <= pivot) {
@@ -33,10 +34,10 @@ public class Quicksort extends Algorithm {
             }
         }
 
-        int swapTemp = sequence[i+1];
-        sequence[i+1] = sequence[endIndex];
+        int swapTemp = sequence[i + 1];
+        sequence[i + 1] = sequence[endIndex];
         sequence[endIndex] = swapTemp;
 
-        return i+1;
+        return i + 1;
     }
 }

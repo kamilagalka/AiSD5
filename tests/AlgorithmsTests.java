@@ -7,6 +7,14 @@ class AlgorithmsTests {
     Quicksort quicksort = new Quicksort();
 
     @Test
+    void nullAsArrayTest(){
+        int[] emptyArray = null;
+        int[] expected = null;
+        int[] actual = quicksort.runAlgorithm(emptyArray);
+        assertArrayEquals(expected,actual);
+    }
+
+    @Test
     void emptyArrayTest() {
         int[] emptyArray = new int[0];
         int[] expected = {};
