@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AlgorithmsTests {
 
     Quicksort quicksort = new Quicksort();
+    Shellsort shellsort = new Shellsort();
 
     @Test
     void nullAsArrayTest(){
@@ -27,6 +28,14 @@ class AlgorithmsTests {
         int[] emptyArray = {-12,123,-4,-12,0,0,1,1634,-4112412};
         int[] expected = {-4112412,-12,-12,-4,0,0,1,123,1634};
         int[] actual = quicksort.runAlgorithm(emptyArray);
+        assertArrayEquals(expected,actual);
+    }
+
+    @Test
+    void smallArrayTestShellsort(){
+        int[] emptyArray = {-12,123,-4,-12,0,0,1,1634,-4112412};
+        int[] expected = {-4112412,-12,-12,-4,0,0,1,123,1634};
+        int[] actual = shellsort.runAlgorithm(emptyArray);
         assertArrayEquals(expected,actual);
     }
 }

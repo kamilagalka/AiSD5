@@ -1,7 +1,6 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.util.Collections;
 import java.util.Random;
 
 public class SequenceGenerator {
@@ -34,8 +33,8 @@ public class SequenceGenerator {
 
     int[] generateSortedSequence(int length, int lowerBound, int upperBound) {
         int[] sequence = generateRandomSequence(length, lowerBound, upperBound);
-        Quicksort quicksort = new Quicksort();
-        quicksort.runAlgorithm(sequence);
+        Shellsort shellsort = new Shellsort();
+        shellsort.runAlgorithm(sequence);
         return sequence;
     }
 
@@ -89,10 +88,10 @@ public class SequenceGenerator {
     public static void main(String[] args) {
         SequenceGenerator sequenceGenerator = new SequenceGenerator();
 
-        int lowerBound = -10000;
-        int upperBound = 10000;
+        int lowerBound = -100;
+        int upperBound = 100;
         int[] sequence_lengths = new int[1];
-        sequence_lengths[0] = 100000;
+        sequence_lengths[0] = 2000000;
 //        sequence_lengths[1] = 20;
 //        sequence_lengths[2] = 2;
 //        sequence_lengths[3] = 12;

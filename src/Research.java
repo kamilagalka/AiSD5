@@ -1,6 +1,7 @@
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 public class Research {
 
@@ -45,28 +46,33 @@ public class Research {
             sequence2[i] = Integer.parseInt(temp[i]);
         }
         for (int j = 0; j < 1; j++) {
-            for (int k = 0; k < sequence.length; k++) {
-                sequence[k] = sequence2[k];
-            }
+//            for (int k = 0; k < sequence.length; k++) {
+//                sequence[k] = sequence2[k];
+//            }
 
 
             long startTime = System.nanoTime();
             //long startTime = System.currentTimeMillis();
             algorithm.runAlgorithm(sequence);
+            //Arrays.sort(sequence);
             long estimatedTime = System.nanoTime() - startTime;
             //long estimatedTime = System.currentTimeMillis() - startTime;
-            System.out.println(estimatedTime);
+            System.out.println("time:"+estimatedTime);
             String result = ((Integer) (int) estimatedTime).toString();
             saveResult(result, resultFilePath);
+
+//            for(int i=0;i<sequence_length;i++){
+//                System.out.println(sequence[i]);
+//            }
 
         }
     }
 
     public static void main(String[] args) throws IOException {
         Algorithm[] algorithms = new Algorithm[1];
-        algorithms[0] = new Qs2();
+        algorithms[0] = new Shellsort();
         int[] sequence_lengths = new int[1];
-        sequence_lengths[0] = 100000;
+        sequence_lengths[0] = 2000000;
         //sequence_lengths[1] = 2;
         String[] sequence_types = new String[4];
         sequence_types[0] = "random";
