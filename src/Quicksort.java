@@ -1,43 +1,39 @@
-
-public class Quicksort extends Algorithm {
-
+public class Quicksort extends Algorithm{
 
     @Override
-    public int[] runAlgorithm(int[] sequence) {
-        if (sequence != null) {
-            return quicksort(sequence, 0, sequence.length - 1);
-        } else return null;
+    int[] runAlgorithm(int[] sequence) {
+        return sort(sequence,0,sequence.length-1);
     }
 
-
-    private int[] quicksort(int sequence[], int startIndex, int endIndex) {
-        if (startIndex < endIndex) {
-            int partitionIndex = partition(sequence, startIndex, endIndex);
-
-            quicksort(sequence, startIndex, partitionIndex - 1);
-            quicksort(sequence, partitionIndex + 1, endIndex);
-        }
-        return sequence;
+    @Override
+    public String getAlgorithmName(){
+        return "QUICKSORT";
     }
 
-    private int partition(int sequence[], int startIndex, int endIndex) {
-        int pivot = sequence[endIndex];
-        int i = (startIndex - 1);
+    private int[] sort(int[] sequence, int startIndex, int endIndex) {
+        int i, j, pivot;
 
-        for (int j = startIndex; j < endIndex; j++) {
-            if (sequence[j] <= pivot) {
+        i = startIndex;
+        j = endIndex;
+        pivot = sequence[(startIndex + endIndex) / 2];
+        do {
+            while (sequence[i] < pivot)
                 i++;
-
-                int swapTemp = sequence[i];
+            while (pivot < sequence[j])
+                j--;
+            if (i <= j) {
+                int temp = sequence[i];
                 sequence[i] = sequence[j];
-                sequence[j] = swapTemp;
+                sequence[j] = temp;
+                i++;
+                j--;
             }
         }
-
-        int swapTemp = sequence[i + 1];
-        sequence[i + 1] = sequence[endIndex];
-        sequence[endIndex] = swapTemp;
-
-        return i + 1;
+        while (i <= j);
+        if (startIndex < j)
+            sort(sequence, startIndex, j);
+        if (i < endIndex)
+            sort(sequence, i, endIndex);
+        return sequence;
     }
 }

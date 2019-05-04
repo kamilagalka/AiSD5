@@ -8,6 +8,11 @@ public class Shellsort extends Algorithm {
         return sort(sequence,Shellsort::sedgewickDistance);
     }
 
+    @Override
+    String getAlgorithmName() {
+        return "SHELLSORT";
+    }
+
 
     public static int[] sort(int[] arr, Function<Integer, Integer[]> distGenerator) {
         int n = arr.length;
