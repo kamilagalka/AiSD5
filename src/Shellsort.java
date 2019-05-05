@@ -1,23 +1,44 @@
-import java.util.function.Function;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Shellsort extends Algorithm {
+class Shellsort extends Algorithm {
+    private String gapSequence;
+    private String algorithmName;
+
+    Shellsort(String gapSequence) {
+        this.gapSequence = gapSequence;
+        algorithmName = "SHELLSORT"+gapSequence;
+    }
+
     @Override
     int[] runAlgorithm(int[] sequence) {
-        return sort(sequence,Shellsort::sedgewickDistance);
+        if(sequence==null){
+            return null;
+        }
+        if(gapSequence.equals("knuth")) {
+            return sort(sequence, knuthDistance(sequence.length));
+        }
+        else if(gapSequence.equals("shell")) {
+            return sort(sequence, shellDistance(sequence.length));
+        }
+        else return sort(sequence,sedgewickDistance(sequence.length));
     }
 
     @Override
     String getAlgorithmName() {
-        return "SHELLSORT";
+        return algorithmName;
     }
 
 
-    public static int[] sort(int[] arr, Function<Integer, Integer[]> distGenerator) {
+    private int[] sort(int[] arr, Integer[] distances) {
+        if(arr==null){
+            return null;
+        }
+        if(arr.length==0){
+            return new int[0];
+        }
         int n = arr.length;
         int iter = 1;
-        Integer[] distances = distGenerator.apply(n);
         int distance = distances[distances.length - iter];
         int current, otherIndex;
         while (distance >= 1) {
@@ -35,7 +56,7 @@ public class Shellsort extends Algorithm {
         return arr;
     }
 
-    public static Integer[] shellDistance(int numberOfElements) {
+    private static Integer[] shellDistance(int numberOfElements) {
         ArrayList<Integer> distances = new ArrayList<>();
         int iteration = 1;
         int generated;
@@ -49,7 +70,7 @@ public class Shellsort extends Algorithm {
     }
 
     // 4^k + 3*2^(k-1) + 1
-    public static Integer[] sedgewickDistance(int numberOfElements) {
+    private static Integer[] sedgewickDistance(int numberOfElements) {
         int generated = 0;
         ArrayList<Integer> distances = new ArrayList<>();
         int k = 0;
@@ -61,10 +82,28 @@ public class Shellsort extends Algorithm {
                 generated = (int) (Math.pow(4, k) + 3 * Math.pow(2, k - 1) + 1);
                 if (generated < numberOfElements) {
                     distances.add(generated);
+
                 }
             }
             k++;
         }
+        return distances.toArray(new Integer[distances.size()]);
+    }
+
+    //(3^k-1)/2
+    private static Integer[] knuthDistance(int numberOfElements) {
+        int generated = 0;
+        ArrayList<Integer> distances = new ArrayList<>();
+        int k = 0;
+        while (generated < numberOfElements) {
+
+            generated = (int) ((Math.pow(3, k) - 1) / 2);
+            if (generated < numberOfElements) {
+                distances.add(generated);
+            }
+            k++;
+        }
+
         return distances.toArray(new Integer[distances.size()]);
     }
 

@@ -3,16 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="f3af5c4a-c6a5-43ef-b50c-4f71a84fd7e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lista5/Qs2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lista5/Qs3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lista5/Algorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/Algorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lista5/Interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/Interface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lista5/Quicksort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/Quicksort.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lista5/Research.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/Research.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lista5/SequenceGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/SequenceGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lista5/Shellsort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/Shellsort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Lista5/AlgorithmsTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Lista5/AlgorithmsTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sequenceGenerator/SequenceGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sequenceGenerator/SequenceGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Qs2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Qs3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quicksort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quicksort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quicksort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Research.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Research.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Shellsort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shellsort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/AlgorithmsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AlgorithmsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userInterface/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/userInterface/Interface.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +27,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Research.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="309">
+              <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sequenceGenerator/SequenceGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1472">
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,16 +52,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quicksort.java">
+        <entry file="file://$PROJECT_DIR$/src/Combsort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-              <folding>
-                <element signature="e#103#104#0" expanded="true" />
-                <element signature="e#160#161#0" expanded="true" />
-                <element signature="e#213#214#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="400">
+              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -63,9 +73,14 @@
     <findStrings>
       <find>ł</find>
       <find>v</find>
+      <find>time</find>
+      <find>INVALID INPUT</find>
+      <find>tab</find>
+      <find>save</find>
     </findStrings>
     <replaceStrings>
       <replace>quicksort</replace>
+      <replace>invalid input</replace>
       <replace>sequence</replace>
     </replaceStrings>
   </component>
@@ -78,17 +93,18 @@
         <option value="$PROJECT_DIR$/tests/QuicksortTest.java" />
         <option value="$PROJECT_DIR$/SequenceGenerator/SequenceGeneratoe.java" />
         <option value="$PROJECT_DIR$/sequences/dane.txt" />
-        <option value="$PROJECT_DIR$/userInterface/Interface.java" />
         <option value="$PROJECT_DIR$/src/Quicksort2.java" />
         <option value="$PROJECT_DIR$/src/Qs2.java" />
-        <option value="$PROJECT_DIR$/tests/AlgorithmsTests.java" />
         <option value="$PROJECT_DIR$/src/Qs3.java" />
-        <option value="$PROJECT_DIR$/sequenceGenerator/SequenceGenerator.java" />
         <option value="$PROJECT_DIR$/src/Qs4.java" />
         <option value="$PROJECT_DIR$/src/Algorithm.java" />
-        <option value="$PROJECT_DIR$/src/Shellsort.java" />
-        <option value="$PROJECT_DIR$/src/Research.java" />
+        <option value="$PROJECT_DIR$/src/Combsort.java" />
         <option value="$PROJECT_DIR$/src/Quicksort.java" />
+        <option value="$PROJECT_DIR$/tests/AlgorithmsTests.java" />
+        <option value="$PROJECT_DIR$/src/Shellsort.java" />
+        <option value="$PROJECT_DIR$/userInterface/Interface.java" />
+        <option value="$PROJECT_DIR$/sequenceGenerator/SequenceGenerator.java" />
+        <option value="$PROJECT_DIR$/src/Research.java" />
       </list>
     </option>
   </component>
@@ -102,6 +118,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,19 +134,23 @@
             <path>
               <item name="Lista5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lista5" type="462c0819:PsiDirectoryNode" />
-              <item name="sequences" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Lista5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lista5" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lista5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lista5" type="462c0819:PsiDirectoryNode" />
+              <item name="userInterface" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -184,12 +205,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlgorithmsTests.smallArrayTestShellsort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuicksortTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lista5" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AlgorithmsTests" />
-      <option name="METHOD_NAME" value="smallArrayTestShellsort" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="QuicksortTests" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -198,9 +217,9 @@
       <list>
         <item itemvalue="Application.Research" />
         <item itemvalue="Application.SequenceGenerator" />
-        <item itemvalue="JUnit.AlgorithmsTests.smallArrayTestShellsort" />
         <item itemvalue="Application.Interface" />
         <item itemvalue="JUnit.AlgorithmsTests" />
+        <item itemvalue="JUnit.QuicksortTests" />
       </list>
     </recent_temporary>
   </component>
@@ -218,44 +237,56 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AlgorithmsTests - 2019.05.02 at 22h 21m 09s.xml">
+    <history-entry file="ShellsortSedgewickTests_nullAsArrayTest - 2019.05.05 at 20h 21m 26s.xml">
+      <configuration name="ShellsortSedgewickTests.nullAsArrayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShellsortSedgewickTests_nullAsArrayTest - 2019.05.05 at 20h 21m 53s.xml">
+      <configuration name="ShellsortSedgewickTests.nullAsArrayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShellsortSedgewickTests - 2019.05.05 at 20h 23m 00s.xml">
+      <configuration name="ShellsortSedgewickTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShellsortKnuthTests - 2019.05.05 at 20h 23m 51s.xml">
+      <configuration name="ShellsortKnuthTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="QuicksortTests - 2019.05.05 at 21h 58m 04s.xml">
+      <configuration name="QuicksortTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="QuicksortTests - 2019.05.05 at 21h 59m 05s.xml">
+      <configuration name="QuicksortTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="QuicksortTests - 2019.05.05 at 21h 59m 37s.xml">
+      <configuration name="QuicksortTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="QuicksortTests - 2019.05.05 at 22h 00m 44s.xml">
+      <configuration name="QuicksortTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlgorithmsTests - 2019.05.05 at 22h 26m 15s.xml">
       <configuration name="AlgorithmsTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTests - 2019.05.02 at 22h 21m 30s.xml">
+    <history-entry file="AlgorithmsTests - 2019.05.05 at 22h 28m 39s.xml">
       <configuration name="AlgorithmsTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AlgorithmsTests - 2019.05.02 at 23h 43m 10s.xml">
-      <configuration name="AlgorithmsTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AlgorithmsTests - 2019.05.02 at 23h 44m 19s.xml">
-      <configuration name="AlgorithmsTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AlgorithmsTests - 2019.05.02 at 23h 45m 02s.xml">
-      <configuration name="AlgorithmsTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AlgorithmsTests_smallArrayTestShellsort - 2019.05.04 at 00h 39m 39s.xml">
-      <configuration name="AlgorithmsTests.smallArrayTestShellsort" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2934947" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2246596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39934534" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26841244" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32569557" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32405892" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -263,30 +294,6 @@
       <window_info anchor="right" id="Maven" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16792738" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32405892" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -329,160 +336,142 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sequences/dane.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/2_random.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/2_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/10_random.txt" />
-    <entry file="file://$PROJECT_DIR$/results/10_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/userInterface/Interface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2_half_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/results/2_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/results/10_random.txt" />
-    <entry file="file://$PROJECT_DIR$/results/2_sorted_backwards.txt" />
-    <entry file="file://$PROJECT_DIR$/results/10_sorted_backwards.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/100000_half_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/src/Quicksort2.java" />
-    <entry file="file://$PROJECT_DIR$/results/1000_random.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/1000_random.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/1000_half_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/results/1000_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/1000_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/results/100000_half_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/results/100000_sorted_backwards.txt" />
-    <entry file="file://$PROJECT_DIR$/results/100000_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/100000_random.txt" />
-    <entry file="file://$PROJECT_DIR$/src/Qs2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/100000_random.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/100_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/100_random.txt" />
+    <entry file="file://$PROJECT_DIR$/results/2000000_random.txt" />
+    <entry file="file://$PROJECT_DIR$/results/2000000_QUICKSORT_sorted_backwards.txt" />
+    <entry file="file://$PROJECT_DIR$/results/2000000_SHELLSORT_sorted_backwards.txt" />
+    <entry file="file://$PROJECT_DIR$/results/2000000_SHELLSORT_random.txt" />
+    <entry file="file://$PROJECT_DIR$/results/2000000_SHELLSORT_half_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/results/2000000_QUICKSORT_half_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/results/2000000_QUICKSORT_random.txt" />
+    <entry file="file://$PROJECT_DIR$/results/2000000_QUICKSORT_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/results/2000000_SHELLSORT_sorted.txt" />
     <entry file="file://$PROJECT_DIR$/sequences/100_half_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/sequences/100_random.txt" />
+    <entry file="file://$PROJECT_DIR$/sequences/100_sorted.txt" />
     <entry file="file://$PROJECT_DIR$/sequences/100_sorted_backwards.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/2000000_sorted.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/2000000_random.txt" />
-    <entry file="file://$PROJECT_DIR$/sequences/2000000_sorted_backwards.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_sorted_backwards.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_sorted.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_half_sorted.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quicksort.java">
+    <entry file="file://$PROJECT_DIR$/results/100_SHELLSORTknuth_half_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100_SHELLSORTsedgewick_random.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100_SHELLSORTsedgewick_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100_SHELLSORTknuth_sorted_backwards.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100_SHELLSORTsedgewick_sorted_backwards.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100_SHELLSORTknuth_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100_SHELLSORTknuth_random.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_QUICKSORT_half_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_SHELLSORTsedgewick_half_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_SHELLSORTsedgewick_random.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_QUICKSORT_sorted_backwards.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_COMBSORT_sorted_backwards.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_SHELLSORTknuth_half_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_SHELLSORTknuth_random.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_COMBSORT_random.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_QUICKSORT_random.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_QUICKSORT_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_COMBSORT_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/results/100000_SHELLSORTsedgewick_sorted.txt" />
+    <entry file="file://$PROJECT_DIR$/QUICKSORT" />
+    <entry file="file://$PROJECT_DIR$/results/COMBSORT" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/text/DecimalFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
-          <folding>
-            <element signature="e#103#104#0" expanded="true" />
-            <element signature="e#160#161#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="506" selection-start-line="506" selection-end-line="506" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Qs3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/sequences/100000_random.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sequenceGenerator/SequenceGenerator.java">
+    <entry file="file://$PROJECT_DIR$/tests/AlgorithmsTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-960">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/AlgorithmsTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quicksort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        <state relative-caret-position="144">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <element signature="e#392#393#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shellsort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        <state relative-caret-position="1424">
+          <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_random.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_QUICKSORT_sorted_backwards.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_SHELLSORT_sorted_backwards.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_SHELLSORT_random.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_SHELLSORT_half_sorted.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_QUICKSORT_half_sorted.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_QUICKSORT_random.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_QUICKSORT_sorted.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/2000000_SHELLSORT_sorted.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quicksort.java">
+    <entry file="file://$PROJECT_DIR$/userInterface/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="e#103#104#0" expanded="true" />
-            <element signature="e#160#161#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="57">
+          <caret line="153" column="12" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sequences/100000_half_sorted.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sequences/2000000_sorted_backwards.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/SHELLSORTknuth.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/SHELLSORTsedgewick.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/COMBSORT.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Combsort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/QUICKSORT.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="123" selection-start-line="2" selection-start-column="123" selection-end-line="2" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/RESULTS.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Research.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="309">
+          <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sequenceGenerator/SequenceGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1472">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,12 +1,20 @@
-public class Quicksort extends Algorithm{
+public class Quicksort extends Algorithm {
 
     @Override
     int[] runAlgorithm(int[] sequence) {
-        return sort(sequence,0,sequence.length-1);
+
+        if (sequence == null) {
+            return null;
+        }
+        if (sequence.length == 0) {
+            return new int[0];
+        }
+
+        return sort(sequence, 0, sequence.length - 1);
     }
 
     @Override
-    public String getAlgorithmName(){
+    public String getAlgorithmName() {
         return "QUICKSORT";
     }
 
