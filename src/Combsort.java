@@ -15,21 +15,21 @@ class Combsort extends Algorithm {
             return null;
         }
         int gap = sequence.length;
-        boolean replace = true;
+        boolean replaced = true;
 
-        while (gap > 1 || replace) {
+        while (gap > 1 || replaced) {
             gap = gap * 10 / 13;
             if (gap == 0) {
                 gap = 1;
             }
 
-            replace = false;
+            replaced = false;
             for (int i = 0; i + gap < sequence.length; i++) {
                 if (sequence[i + gap] < sequence[i]) {
                     int temp = sequence[i];
                     sequence[i] = sequence[i + gap];
                     sequence[i + gap] = temp;
-                    replace = true;
+                    replaced = true;
                 }
             }
         }

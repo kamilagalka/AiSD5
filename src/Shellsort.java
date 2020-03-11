@@ -30,30 +30,29 @@ class Shellsort extends Algorithm {
     }
 
 
-    private int[] sort(int[] arr, Integer[] distances) {
-        if(arr==null){
+    private int[] sort(int[] sequence, Integer[] distances) {
+        if(sequence==null){
             return null;
         }
-        if(arr.length==0){
+        if(sequence.length==0){
             return new int[0];
         }
-        int n = arr.length;
-        int iter = 1;
-        int distance = distances[distances.length - iter];
-        int current, otherIndex;
+        int k = 1;
+        int distance = distances[distances.length - k];
+        int current, otherID;
         while (distance >= 1) {
-            for (int i = distance; i < n; i++) {
-                current = arr[i];
-                otherIndex = i;
-                while (otherIndex >= distance && current < arr[otherIndex - distance]) {
-                    arr[otherIndex] = arr[otherIndex - distance];
-                    otherIndex -= distance;
+            for (int i = distance; i < sequence.length; i++) {
+                current = sequence[i];
+                otherID = i;
+                while (otherID >= distance && current < sequence[otherID - distance]) {
+                    sequence[otherID] = sequence[otherID - distance];
+                    otherID -= distance;
                 }
-                arr[otherIndex] = current;
+                sequence[otherID] = current;
             }
-            distance = distances[distances.length - ++iter];
+            distance = distances[distances.length - ++k];
         }
-        return arr;
+        return sequence;
     }
 
     private static Integer[] shellDistance(int numberOfElements) {
@@ -69,7 +68,6 @@ class Shellsort extends Algorithm {
         return distances.toArray(new Integer[distances.size()]);
     }
 
-    // 4^k + 3*2^(k-1) + 1
     private static Integer[] sedgewickDistance(int numberOfElements) {
         int generated = 0;
         ArrayList<Integer> distances = new ArrayList<>();
@@ -90,7 +88,6 @@ class Shellsort extends Algorithm {
         return distances.toArray(new Integer[distances.size()]);
     }
 
-    //(3^k-1)/2
     private static Integer[] knuthDistance(int numberOfElements) {
         int generated = 0;
         ArrayList<Integer> distances = new ArrayList<>();

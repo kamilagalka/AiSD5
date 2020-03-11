@@ -59,7 +59,7 @@ public class Interface {
         System.out.println("\nINSERT SEQUENCE LENGTH: ");
         try {
             length = new Integer(scanner.next());
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             System.out.println("[invalid input] - using default length (10)");
             length = 10;
         }
@@ -76,7 +76,7 @@ public class Interface {
         System.out.println("\nINSERT LOWER BOUND: ");
         try {
             lowerBound = new Integer(scanner.next());
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             System.out.println("[invalid input] - using default lowerBound (0)");
             lowerBound = 0;
         }
@@ -89,7 +89,7 @@ public class Interface {
         System.out.println("\nINSERT UPPER BOUND: ");
         try {
             upperBound = new Integer(scanner.next());
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             System.out.println("[invalid input] - using default upperBound (100)");
             upperBound = 100;
         }

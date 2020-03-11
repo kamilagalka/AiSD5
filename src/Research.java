@@ -1,6 +1,4 @@
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class Research {
 
@@ -14,7 +12,8 @@ public class Research {
                 pw.print("");
                 pw.close();
             }
-        } catch (Exception ignored) {
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -24,29 +23,21 @@ public class Research {
             output.write(text);
             output.write(" ");
             output.close();
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
 
-    private static long sort_sequence_and_return_time(Algorithm algorithm, int sequence_length, String sequence_type, int sequence_ID) throws IOException {
-        String filePath = "sequences\\" + sequence_length + "_" + sequence_type + ".txt";
-
-
-        String sequenceLine = Files.lines(Paths.get(filePath)).skip(sequence_ID).findFirst().get();
-        int[] sequence = new int[sequence_length];
-        String[] temp = sequenceLine.split(" ");
-        for (int i = 0; i < sequence_length; i++) {
-            sequence[i] = Integer.parseInt(temp[i]);
-        }
+    private static long sort_sequence_and_return_time(Algorithm algorithm, int[] sequence) {
+        String filePath = "results\\" + algorithm.getAlgorithmName() + ".txt";
 
         long startTime = System.nanoTime();
         algorithm.runAlgorithm(sequence);
         long estimatedTime = System.nanoTime() - startTime;
         estimatedTime /= 1000000;
         String result = ((Integer) (int) estimatedTime).toString();
-        saveToFile(result, "results\\" + algorithm.getAlgorithmName() + ".txt");
+        saveToFile(result, filePath);
 
         return estimatedTime;
     }
@@ -68,7 +59,23 @@ public class Research {
         return Math.sqrt(difsum / (results.length - 2));
     }
 
-    public static void main(String[] args) throws IOException {
+    private static int[][] readSequences(String filepath){
+        int[][] sequences = null;
+
+        try {
+            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(filepath));
+                sequences = (int[][]) objectInputStream.readObject();
+                objectInputStream.close();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+        return sequences;
+    }
+
+    public static void main(String[] args) {
+        int numberOfSequences = 100;
         Algorithm[] algorithms = new Algorithm[4];
         algorithms[0] = new Quicksort();
         algorithms[1] = new Shellsort("knuth");
@@ -91,20 +98,26 @@ public class Research {
 
         for (Algorithm algorithm : algorithms) {
             saveToFile(algorithm.getAlgorithmName(), "results\\" + algorithm.getAlgorithmName() + ".txt");
-            for (int sequence_legth : sequence_lengths) {
+
+            for (int sequence_length : sequence_lengths) {
+
                 for (String sequence_type : sequence_types) {
-                    saveToFile("\n" + ((Integer) sequence_legth).toString() + " " + sequence_type + "\n", "results\\" + algorithm.getAlgorithmName() + ".txt");
-                    long[] results = new long[100];
-                    for (int sequenceID = 0; sequenceID < 100; sequenceID++) {
-                        results[sequenceID] = sort_sequence_and_return_time(algorithm, sequence_legth, sequence_type, sequenceID);
+                    saveToFile("\n" + ((Integer) sequence_length).toString() + " " + sequence_type + "\n", "results\\" + algorithm.getAlgorithmName() + ".txt");
+                    long[] results = new long[numberOfSequences];
+                    String filePath = "sequences\\" + sequence_length + "_" + sequence_type + ".txt";
+                    int[][] sequences = readSequences(filePath);
+
+                    for (int sequenceID = 0; sequenceID < numberOfSequences; sequenceID++) {
+                        results[sequenceID] = sort_sequence_and_return_time(algorithm, sequences[sequenceID]);
                     }
+
                     java.text.DecimalFormat df = new java.text.DecimalFormat("0.000");
                     double avg = calcAvg(results);
                     double standardDeviation = calcStandardDeviation(results, avg);
                     String avgs = df.format(avg);
-                    String sds = df.format(standardDeviation);
-                    saveToFile("\navg: " + avgs + "\tstandardDeviation: " + sds, "results\\" + algorithm.getAlgorithmName() + ".txt");
-                    saveToFile("\n" + avgs + "\t\t" + sds + "\t\t\t\t" + algorithm.getAlgorithmName() + " " + ((Integer) sequence_legth).toString() + " " + sequence_type, "results\\RESULTS.txt");
+                    String standardDeviations = df.format(standardDeviation);
+                    saveToFile("\navg: " + avgs + "\tstandardDeviation: " + standardDeviations, "results\\" + algorithm.getAlgorithmName() + ".txt");
+                    saveToFile("\n" + avgs + "\t\t" + standardDeviations + "\t\t\t\t" + algorithm.getAlgorithmName() + " " + ((Integer) sequence_length).toString() + " " + sequence_type, "results\\RESULTS.txt");
                 }
             }
         }

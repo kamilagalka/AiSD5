@@ -3,26 +3,13 @@ import java.util.Random;
 
 public class SequenceGenerator {
 
-    private static void saveSequence(int[] array, String filename) {
-        try {
-            BufferedWriter output = new BufferedWriter(new FileWriter(filename, true));
-            for (int i = 0; i < array.length; i++) {
-                output.write(((Integer) array[i]).toString());
-                output.write(" ");
-            }
-            output.newLine();
-            output.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
-    private static void saveSequence2(int[] array, String filename) {
+    private static void saveSequence(int[][] array, String filename) {
         try {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(filename));
             objectOutputStream.writeObject(array);
-        } catch (IOException e){
-
+        } catch (IOException e) {
+            System.out.println("No such file");
         }
     }
 
@@ -65,8 +52,6 @@ public class SequenceGenerator {
         for (int i = length - 1; i >= 0; i--) {
             sequence[length - 1 - i] = sequenceInAscendingOrder[i];
         }
-
-
         return sequence;
     }
 
@@ -86,7 +71,7 @@ public class SequenceGenerator {
                 }
             }
 
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.out.println("No such file");
         }
     }
@@ -94,6 +79,7 @@ public class SequenceGenerator {
 
     public static void main(String[] args) {
         SequenceGenerator sequenceGenerator = new SequenceGenerator();
+        int numberOfSequences = 100;
 
         int lowerBound = -100000;
         int upperBound = 100000;
@@ -104,14 +90,29 @@ public class SequenceGenerator {
         sequence_lengths[3] = 2000000;
 
         clearAllSequences(sequence_lengths);
-        for (int i = 0; i < 100; i++) {
-            for (int sequence_length : sequence_lengths) {
-                saveSequence(sequenceGenerator.generateRandomSequence(sequence_length, lowerBound, upperBound), "sequences\\" + ((Integer) sequence_length).toString() + "_random.txt");
-                saveSequence(sequenceGenerator.generateHalfSortedSequence(sequence_length, lowerBound, upperBound), "sequences\\" + ((Integer) sequence_length).toString() + "_half_sorted.txt");
-                saveSequence(sequenceGenerator.generateSortedSequence(sequence_length, lowerBound, upperBound), "sequences\\" + ((Integer) sequence_length).toString() + "_sorted.txt");
-                saveSequence(sequenceGenerator.generateSortedBackwardsSequence(sequence_length, lowerBound, upperBound), "sequences\\" + ((Integer) sequence_length).toString() + "_sorted_backwards.txt");
+
+
+        for (int sequence_length : sequence_lengths) {
+            int[][] randomSequences = new int[numberOfSequences][];
+            int[][] halfSortedSequences = new int[numberOfSequences][];
+            int[][] sortedSequences = new int[numberOfSequences][];
+            int[][] sortedBackwardsSequences = new int[numberOfSequences][];
+            for (int i = 0; i < numberOfSequences; i++) {
+                randomSequences[i] = sequenceGenerator.generateRandomSequence(sequence_length, lowerBound, upperBound);// "sequences\\" + ((Integer) sequence_length).toString() + "_random.txt")
+                halfSortedSequences[i] = sequenceGenerator.generateHalfSortedSequence(sequence_length, lowerBound, upperBound); //"sequences\\" + ((Integer) sequence_length).toString() + "_half_sorted.txt";
+            }
+            saveSequence(randomSequences, "sequences\\" + ((Integer) sequence_length).toString() + "_random.txt");
+            saveSequence(halfSortedSequences, "sequences\\" + ((Integer) sequence_length).toString() + "_half_sorted.txt");
+
+            randomSequences = null;
+            halfSortedSequences = null;
+            for (int i = 0; i < numberOfSequences; i++) {
+                sortedSequences[i] = sequenceGenerator.generateSortedSequence(sequence_length, lowerBound, upperBound); //"sequences\\" + ((Integer) sequence_length).toString() + "_sorted.txt");
+                sortedBackwardsSequences[i] = sequenceGenerator.generateSortedBackwardsSequence(sequence_length, lowerBound, upperBound);// "sequences\\" + ((Integer) sequence_length).toString() + "_sorted_backwards.txt");
             }
 
+            saveSequence(sortedSequences, "sequences\\" + ((Integer) sequence_length).toString() + "_sorted.txt");
+            saveSequence(sortedBackwardsSequences, "sequences\\" + ((Integer) sequence_length).toString() + "_sorted_backwards.txt");
         }
     }
 }

@@ -28,15 +28,15 @@ class AlgorithmsTests {
         int[] oneElementArray = {1};
         int[] expected = {1};
         int[] actual = quicksort.runAlgorithm(oneElementArray);
-        assertArrayEquals(expected,actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
     void twoElementsQuicksortTest() {
-        int[] twoElementsArray = {2,1};
-        int[] expected = {1,2};
+        int[] twoElementsArray = {2, 1};
+        int[] expected = {1, 2};
         int[] actual = quicksort.runAlgorithm(twoElementsArray);
-        assertArrayEquals(expected,actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -48,7 +48,6 @@ class AlgorithmsTests {
     }
 
 
-
     private Combsort combsort = new Combsort();
 
     @Test
@@ -56,7 +55,7 @@ class AlgorithmsTests {
         int[] emptyArray = null;
         int[] expected = null;
         int[] actual = combsort.runAlgorithm(emptyArray);
-        assertArrayEquals(null, actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -72,15 +71,15 @@ class AlgorithmsTests {
         int[] oneElementArray = {1};
         int[] expected = {1};
         int[] actual = combsort.runAlgorithm(oneElementArray);
-        assertArrayEquals(expected,actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
     void twoElementsCombsortTest() {
-        int[] twoElementsArray = {2,1};
-        int[] expected = {1,2};
+        int[] twoElementsArray = {2, 1};
+        int[] expected = {1, 2};
         int[] actual = combsort.runAlgorithm(twoElementsArray);
-        assertArrayEquals(expected,actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -90,7 +89,6 @@ class AlgorithmsTests {
         int[] actual = combsort.runAlgorithm(emptyArray);
         assertArrayEquals(expected, actual);
     }
-
 
 
     private Shellsort shellsortSedgewick = new Shellsort("sedgewick");
@@ -116,15 +114,15 @@ class AlgorithmsTests {
         int[] oneElementArray = {1};
         int[] expected = {1};
         int[] actual = shellsortSedgewick.runAlgorithm(oneElementArray);
-        assertArrayEquals(expected,actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
     void twoElementsShellsortSedgewickTest() {
-        int[] twoElementsArray = {2,1};
-        int[] expected = {1,2};
+        int[] twoElementsArray = {2, 1};
+        int[] expected = {1, 2};
         int[] actual = shellsortSedgewick.runAlgorithm(twoElementsArray);
-        assertArrayEquals(expected,actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -134,7 +132,6 @@ class AlgorithmsTests {
         int[] actual = shellsortSedgewick.runAlgorithm(emptyArray);
         assertArrayEquals(expected, actual);
     }
-
 
 
     private Shellsort shellsortKnuth = new Shellsort("knuth");
@@ -160,15 +157,15 @@ class AlgorithmsTests {
         int[] oneElementArray = {1};
         int[] expected = {1};
         int[] actual = shellsortKnuth.runAlgorithm(oneElementArray);
-        assertArrayEquals(expected,actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
     void twoElementsShellsortKnuthTest() {
-        int[] twoElementsArray = {2,1};
-        int[] expected = {1,2};
+        int[] twoElementsArray = {2, 1};
+        int[] expected = {1, 2};
         int[] actual = shellsortKnuth.runAlgorithm(twoElementsArray);
-        assertArrayEquals(expected,actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test

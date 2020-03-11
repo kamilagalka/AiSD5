@@ -25,10 +25,12 @@ public class Quicksort extends Algorithm {
         j = endIndex;
         pivot = sequence[(startIndex + endIndex) / 2];
         do {
-            while (sequence[i] < pivot)
+            while (sequence[i] < pivot) {
                 i++;
-            while (pivot < sequence[j])
+            }
+            while (pivot < sequence[j]) {
                 j--;
+            }
             if (i <= j) {
                 int temp = sequence[i];
                 sequence[i] = sequence[j];
