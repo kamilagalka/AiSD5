@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3af5c4a-c6a5-43ef-b50c-4f71a84fd7e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lista5/Combsort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/Combsort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lista5/Interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/Interface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lista5/Quicksort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/Quicksort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lista5/Research.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/Research.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lista5/SequenceGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/SequenceGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lista5/Shellsort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lista5/Shellsort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Lista5/AlgorithmsTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Lista5/AlgorithmsTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sequenceGenerator/SequenceGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sequenceGenerator/SequenceGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Combsort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Combsort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quicksort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quicksort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Research.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Research.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shellsort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shellsort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/AlgorithmsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AlgorithmsTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userInterface/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/userInterface/Interface.java" afterDir="false" />
-    </list>
+    <list default="true" id="f3af5c4a-c6a5-43ef-b50c-4f71a84fd7e9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +45,6 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1Yza8VhIQI8SDGUWQ0NVhVDV8uq" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes />
-  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
